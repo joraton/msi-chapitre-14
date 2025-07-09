@@ -41,33 +41,33 @@ export default function SectionBlock({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6"
+      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-gray-200 hover:border-gray-300"
     >
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div className="flex items-center gap-4 flex-1">
-          {/* Icon Circle */}
-          <div className={`${bgColor} p-3 rounded-full flex-shrink-0`}>
-            <Icon className={`h-6 w-6 ${color}`} />
+      <div className="p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+          {/* Icon */}
+          <div className={`${bgColor} p-2.5 sm:p-3 rounded-lg flex-shrink-0 mx-auto sm:mx-0`}>
+            <Icon className={`h-5 w-5 sm:h-6 sm:w-6 ${color}`} />
           </div>
 
           {/* Content */}
-          <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-semibold text-gray-900 mb-1">
+          <div className="flex-1 min-w-0 text-center sm:text-left">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
               {title}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
               {description}
             </p>
           </div>
-        </div>
 
-        {/* Button */}
-        <Link
-          href={href}
-          className="bg-blue-600 hover:bg-blue-700 hover:shadow-lg text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-center flex-shrink-0 self-start sm:self-center shadow-md border-2 border-blue-500/30 hover:border-blue-400/50 hover:scale-105"
-        >
-          Commencer
-        </Link>
+          {/* Button */}
+          <Link
+            href={href}
+            className="bg-blue-600 hover:bg-blue-700 hover:shadow-lg text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-200 text-center flex-shrink-0 self-center shadow-md border-2 border-blue-500/30 hover:border-blue-400/50 hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
+          >
+            Commencer
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
